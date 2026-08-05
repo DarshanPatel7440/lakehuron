@@ -1,0 +1,1324 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com
+*//*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 1536px;
+  }
+}
+.visible {
+  visibility: visible;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.grow {
+  flex-grow: 1;
+}
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.resize {
+  resize: both;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.break-all {
+  word-break: break-all;
+}
+.border {
+  border-width: 1px;
+}
+.text-lead {
+  font-size: clamp(1.1rem, 1.5vw, 1.375rem);
+}
+.text-section {
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+.outline {
+  outline-style: solid;
+}
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-filter {
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Colors */
+  --color-navy:        #082F57;
+  --color-navy-dark:   #051E38;
+  --color-navy-mid:    #0D3D6E;
+  --color-gold:        #B97816;
+  --color-gold-light:  #D4960E;
+  --color-gold-pale:   #F0D080;
+  --color-bronze:      #8B5E10;
+  --color-ivory:       #F5F0E8;
+  --color-ivory-dark:  #EDE6D6;
+  --color-charcoal:    #1C1C1C;
+  --color-graphite:    #3A3A3A;
+  --color-mist:        #8A9BAD;
+  --color-white:       #FFFFFF;
+  --color-surface-dark:#071525;
+
+  /* Gradients */
+  --gradient-navy: linear-gradient(135deg, #082F57 0%, #051E38 100%);
+  --gradient-gold: linear-gradient(135deg, #B97816 0%, #8B5E10 100%);
+  --gradient-hero: linear-gradient(180deg,
+    rgba(5,30,56,0.88) 0%,
+    rgba(5,30,56,0.55) 55%,
+    rgba(5,30,56,0.94) 100%);
+
+  /* Spacing (8-px grid) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  /* Border Radius */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;    /* buttons */
+  --radius-xl:   20px;    /* cards */
+  --radius-2xl:  28px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-card:       0 4px 24px rgba(8,47,87,0.10);
+  --shadow-card-hover: 0 20px 60px rgba(8,47,87,0.14);
+  --shadow-gold-glow:  0 0 32px rgba(185,120,22,0.30);
+  --shadow-btn-hover:  0 12px 36px rgba(185,120,22,0.45);
+  --shadow-glass:      inset 0 1px 0 rgba(255,255,255,0.12);
+
+  /* Easings */
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1.0);
+  --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-power3: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* Durations */
+  --dur-fast:    200ms;
+  --dur-normal:  400ms;
+  --dur-slow:    700ms;
+
+  /* Fonts */
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-editorial:'Playfair Display', Georgia, serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+  --font-ui:       'Manrope', system-ui, sans-serif;
+
+  /* Type scale — refined, premium */
+  --text-hero:    clamp(2.625rem, 6vw, 5.5rem);   /* 42→88px */
+  --text-section: clamp(2rem, 4vw, 3.5rem);        /* 32→56px */
+  --text-sub:     clamp(1.25rem, 2vw, 2rem);       /* 20→32px */
+  --text-lead:    clamp(1rem, 1.3vw, 1.125rem);    /* 16→18px */
+
+  /* Tracking */
+  --tracking-tight:   -0.03em;
+  --tracking-normal:  -0.01em;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.15em;
+
+  /* Leading */
+  --leading-tight:  1.05;
+  --leading-snug:   1.3;
+  --leading-normal: 1.65;
+  --leading-loose:  1.85;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: var(--leading-normal);
+  color: var(--color-charcoal);
+  background-color: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video { display: block; max-width: 100%; }
+
+::-moz-selection { background: var(--color-gold); color: white; }
+
+::selection { background: var(--color-gold); color: white; }
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+.skip-to-main {
+  position: fixed; top: 0; left: 0; z-index: 9999;
+  padding: 12px 24px;
+  background: var(--color-gold);
+  color: white;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transform: translateY(-100%);
+  transition: transform var(--dur-normal) var(--ease-expo);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.skip-to-main:focus { transform: translateY(0); }
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-navy-dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: var(--radius-pill);
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITY CLASSES
+   ============================================================ */
+.text-hero {
+  font-size: var(--text-hero);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.text-section {
+  font-size: var(--text-section);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: var(--tracking-tight);
+}
+.text-sub {
+  font-size: var(--text-sub);
+  font-family: var(--font-display);
+  line-height: var(--leading-snug);
+}
+.text-lead {
+  font-size: var(--text-lead);
+  font-family: var(--font-body);
+  line-height: var(--leading-loose);
+  color: var(--color-graphite);
+}
+.text-overline {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(24px, 4vw, 64px);
+}
+
+.section-padding {
+  padding: clamp(80px, 10vw, 120px) 0;
+}
+
+/* ============================================================
+   BUTTONS — Premium, polished
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 28px;
+  background: var(--gradient-gold);
+  color: white;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform var(--dur-normal) var(--ease-expo),
+    box-shadow var(--dur-normal) var(--ease-expo);
+  box-shadow: 0 4px 16px rgba(185,120,22,0.25);
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+  transition: opacity var(--dur-normal);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-btn-hover);
+}
+.btn-primary:active { transform: translateY(-1px) scale(1); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 28px;
+  background: transparent;
+  color: white;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.38);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  transition:
+    background var(--dur-normal) var(--ease-expo),
+    border-color var(--dur-normal) var(--ease-expo),
+    transform var(--dur-normal) var(--ease-expo);
+}
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-3px);
+}
+
+/* ============================================================
+   NAVIGATION LINK
+   ============================================================ */
+.nav-link {
+  position: relative;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 4px;
+  white-space: nowrap;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-gold);
+  border-radius: var(--radius-pill);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-normal) var(--ease-expo);
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.nav-link:hover { color: var(--color-gold-pale); }
+
+/* ============================================================
+   GLASS CARD
+   ============================================================ */
+.glass-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(185,120,22,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--dur-normal) var(--ease-expo),
+    box-shadow var(--dur-normal) var(--ease-expo),
+    border-color var(--dur-normal);
+}
+.glass-card:hover {
+  background: rgba(185,120,22,0.05);
+  border-color: rgba(185,120,22,0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.35), 0 0 32px rgba(185,120,22,0.1);
+}
+
+/* ============================================================
+   CONTENT CARDS (on light backgrounds)
+   ============================================================ */
+.card {
+  background: white;
+  border: 1px solid rgba(8,47,87,0.07);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition:
+    transform var(--dur-normal) var(--ease-expo),
+    box-shadow var(--dur-normal) var(--ease-expo);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ============================================================
+   GOLD DIVIDER
+   ============================================================ */
+.gold-divider {
+  width: 56px;
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-pill);
+  margin: 16px 0 32px;
+}
+
+/* ============================================================
+   ANIMATED COUNTER
+   ============================================================ */
+.counter-value {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.counter-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 8px;
+}
+
+/* ============================================================
+   SCROLL INDICATOR
+   ============================================================ */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollBounce 2.5s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition:
+    opacity var(--dur-normal) var(--ease-expo),
+    transform var(--dur-normal) var(--ease-expo),
+    box-shadow var(--dur-normal);
+  box-shadow: 0 4px 20px rgba(185,120,22,0.4);
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 32px rgba(185,120,22,0.55);
+}
+
+/* ============================================================
+   ACCORDION
+   ============================================================ */
+.accordion-item {
+  border-bottom: 1px solid rgba(8,47,87,0.09);
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes float {
+  0%, 100% { transform: translateY(-10px); }
+  50%       { transform: translateY(10px); }
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(185,120,22,0.2); }
+  50%       { box-shadow: 0 8px 32px rgba(185,120,22,0.5); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   ANIMATED UNDERLINE UTILITY
+   ============================================================ */
+.animated-underline {
+  background-image: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  background-size: 0% 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms var(--ease-expo);
+  padding-bottom: 2px;
+}
+.animated-underline:hover { background-size: 100% 1.5px; }
+
+/* ============================================================
+   RESPONSIVE OVERRIDES — Full Multi-Breakpoint System
+   ============================================================ */
+
+/* ── Base: prevent horizontal overflow on all devices ── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+*, *::before, *::after {
+  min-width: 0;
+}
+
+/* ── Buttons: fluid sizing, proper touch targets ── */
+.btn-primary, .btn-outline {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* ── Large Desktop (≥1536px) ── */
+@media (min-width: 1536px) {
+  .section-container { max-width: 1440px; }
+}
+
+/* ── Desktop (≥1280px) ── */
+@media (min-width: 1280px) {
+  .section-container { max-width: 1280px; }
+}
+
+/* ── Laptop (≤1366px) ── */
+@media (max-width: 1366px) {
+  .section-container { padding: 0 clamp(24px, 3.5vw, 56px); }
+}
+
+/* ── Tablet (≤1024px) ── */
+@media (max-width: 1024px) {
+  .section-container { padding: 0 clamp(20px, 4vw, 40px); }
+
+  /* Nav collapses to hamburger — handled in Header.tsx */
+  
+  /* Programs grid */
+  .programs-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  
+  /* Coaches grid */
+  .coaches-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── Small Tablet / Large Mobile (≤900px) ── */
+@media (max-width: 900px) {
+  /* Common 2-col → 1-col grids */
+  .about-grid,
+  .contact-grid,
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* 3-col → 2-col */
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: clamp(16px, 3vw, 24px) !important;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: clamp(16px, 3vw, 24px) !important;
+  }
+
+  /* Events grid */
+  .events-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Features grid 4-col → 2-col */
+  .features-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Journey steps 6-col → 3-col */
+  .journey-steps { grid-template-columns: repeat(3, 1fr) !important; gap: 32px !important; }
+
+  /* Testimonial layout */
+  .testimonial-layout { grid-template-columns: 1fr !important; }
+
+  /* Reviews grid */
+  .reviews-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  
+  /* FAQ layout */
+  .faq-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .faq-sidebar { position: relative !important; top: 0 !important; }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+  :root {
+    --text-hero:    clamp(2.25rem, 10vw, 3rem);
+    --text-section: clamp(1.875rem, 8vw, 2.5rem);
+  }
+
+  /* Buttons full-width on mobile */
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section heading spacing */
+  h2.text-section {
+    margin-bottom: 40px !important;
+  }
+
+  /* Programs 2-col → 1-col */
+  .programs-grid { grid-template-columns: 1fr !important; }
+
+  /* Coaches 2-col → 1-col */
+  .coaches-grid { grid-template-columns: 1fr !important; }
+
+  /* Stats grids → 2-col */
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Success stories → 1-col */
+  .stories-grid { grid-template-columns: 1fr !important; }
+
+  /* FAQ full width */
+  .faq-container { max-width: 100% !important; }
+
+  /* Footer grid */
+  .footer-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+  /* Back to top / scroll */
+  .scroll-indicator { bottom: 24px; }
+  .back-to-top { bottom: 24px; right: 20px; }
+
+  /* Journey steps → 2-col on mobile */
+  .journey-steps { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+
+  /* Cards row → 1-col */
+  .cards-row { grid-template-columns: 1fr !important; gap: 16px !important; }
+  
+  /* Events card fix */
+  .event-card { grid-template-columns: 60px 1fr !important; }
+  .event-card > *:last-child { grid-column: 1/-1; flex-direction: row !important; flex-wrap: wrap !important; }
+}
+
+/* ── Small Mobile (≤600px) ── */
+@media (max-width: 600px) {
+  :root {
+    --text-hero:    clamp(2rem, 11vw, 2.75rem);
+    --text-section: clamp(1.75rem, 9vw, 2.25rem);
+  }
+
+  .section-container { padding: 0 clamp(16px, 5vw, 24px); }
+
+  /* Stats → 2-col compact */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    padding: 32px 24px !important;
+    gap: 24px !important;
+  }
+
+  /* Values grid → 1-col on small mobile */
+  .values-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* Features grid → 1-col */
+  .features-grid { grid-template-columns: 1fr !important; }
+
+  /* Reviews → 1-col */
+  .reviews-grid { grid-template-columns: 1fr !important; }
+
+  /* Gold divider tighter */
+  .gold-divider { margin: 12px 0 24px; }
+  
+  /* Journey steps → 2-col */
+  .journey-steps { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+}
+
+/* ── Extra Small (≤480px) ── */
+@media (max-width: 480px) {
+  :root {
+    --text-hero:    clamp(1.875rem, 12vw, 2.25rem);
+    --text-section: clamp(1.625rem, 10vw, 2rem);
+  }
+
+  .section-container { padding: 0 16px; }
+  .back-to-top { bottom: 16px; right: 16px; width: 44px; height: 44px; }
+  
+  /* Journey steps → 1-col on smallest screens */
+  .journey-steps { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+
+/* ── Tiny Mobile (≤375px) ── */
+@media (max-width: 375px) {
+  :root {
+    --text-hero:    1.75rem;
+    --text-section: 1.5rem;
+  }
+  .section-container { padding: 0 12px; }
+}
+
+/* ── Ultra-wide (≥1920px) ── */
+@media (min-width: 1920px) {
+  .section-container { max-width: 1600px; }
+}
+@media (min-width: 2560px) {
+  .section-container { max-width: 2000px; }
+  :root {
+    --text-hero: 6rem;
+    --text-section: 4.5rem;
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
