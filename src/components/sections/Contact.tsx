@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const contactInfo = [
   { Icon: MapPin, label: 'Location', value: 'Lake Huron, Ontario, Canada' },
   { Icon: Mail, label: 'Email', value: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca?subject=Inquiry%20%E2%80%93%20Lake%20Huron%20Volleyball%20Club&body=Hi%20Lake%20Huron%20VC%20Team%2C%0A%0AI%20am%20reaching%20out%20to%20inquire%20about%20your%20programs.%0A%0AName%3A%20%5BYour%20Name%5D%0APhone%3A%20%5BYour%20Phone%5D%0AInquiry%3A%20%5BPlease%20describe%20your%20question%20or%20interest%5D%0A%0AThank%20you%2C%0A%5BYour%20Name%5D' },
-  { Icon: Clock, label: 'Office Hours', value: 'Mon–Fri: 3PM–9PM · Sat: 8AM–6PM' },
 ];
 
 const inquiryTypes = [
@@ -18,43 +17,45 @@ const inquiryTypes = [
   'I want more info on the club and operation',
 ];
 
-interface FormState {
-  name: string;
-  email: string;
-  inquiries: string[];
-  message: string;
-}
-
 export default function Contact() {
-  const [form, setForm] = useState<FormState>({
-    name: '',
-    email: '',
-    inquiries: [],
-    message: '',
-  });
-
-  const toggleInquiry = (type: string) => {
-    setForm(prev => ({
-      ...prev,
-      inquiries: prev.inquiries.includes(type)
-        ? prev.inquiries.filter(i => i !== type)
-        : [...prev.inquiries, type],
-    }));
-  };
+  const [fields, setFields] = useState({ name: '', email: '', message: '' });
+  const [inquiries, setInquiries] = useState<string[]>([]);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-  ) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  const toggleInquiry = (type: string) => {
+    setInquiries(prev =>
+      prev.includes(type) ? prev.filter(i => i !== type) : [...prev, type]
+    );
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFields(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate async send — replace with real endpoint as needed
-    await new Promise(r => setTimeout(r, 1400));
-    setStatus('success');
+    try {
+      const res = await fetch('https://formspree.io/f/mzepzekn', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: fields.name,
+          email: fields.email,
+          inquiries: inquiries.join(', '),
+          message: fields.message,
+        }),
+      });
+      if (res.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const inputStyle: React.CSSProperties = {
@@ -182,7 +183,7 @@ export default function Contact() {
                     Thank you for reaching out. A member of our team will respond within 24 hours. We look forward to welcoming you to the Lake Huron family.
                   </p>
                   <button
-                    onClick={() => { setStatus('idle'); setForm({ name: '', email: '', inquiries: [], message: '' }); }}
+                    onClick={() => { setStatus('idle'); setFields({ name: '', email: '', message: '' }); setInquiries([]); }}
                     className="btn-primary"
                     style={{ justifyContent: 'center', width: '100%' }}
                   >
@@ -212,7 +213,7 @@ export default function Contact() {
                         type="text"
                         required
                         placeholder="Jane Smith"
-                        value={form.name}
+                        value={fields.name}
                         onChange={handleChange}
                         style={inputStyle}
                         onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
@@ -231,7 +232,7 @@ export default function Contact() {
                         type="email"
                         required
                         placeholder="jane@example.com"
-                        value={form.email}
+                        value={fields.email}
                         onChange={handleChange}
                         style={inputStyle}
                         onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
@@ -246,7 +247,7 @@ export default function Contact() {
                       </p>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                         {inquiryTypes.map(type => {
-                          const selected = form.inquiries.includes(type);
+                          const selected = inquiries.includes(type);
                           return (
                             <button
                               key={type}
@@ -307,7 +308,7 @@ export default function Contact() {
                         required
                         rows={5}
                         placeholder="Tell us about your athlete, questions, or goals…"
-                        value={form.message}
+                        value={fields.message}
                         onChange={handleChange}
                         style={{ ...inputStyle, resize: 'vertical', minHeight: '130px' }}
                         onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
@@ -319,7 +320,7 @@ export default function Contact() {
                       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 16px', background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: '8px' }}>
                         <AlertCircle size={16} style={{ color: '#ef4444', flexShrink: 0 }} />
                         <p style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.85rem', color: '#dc2626', margin: 0 }}>
-                          Something went wrong. Please try again or call us directly.
+                          Something went wrong. Please try again or email us directly.
                         </p>
                       </div>
                     )}

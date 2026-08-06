@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const steps = [
   { num: '01', Icon: UserPlus, title: 'Join', description: 'Register for the program that fits your athlete\'s age and ambition. We make it simple.' },
-  { num: '02', Icon: ClipboardList, title: 'Assess', description: 'A skill assessment ensures every athlete is placed where they\'ll grow fastest.' },
+  { num: '02', Icon: ClipboardList, title: 'Tryouts', description: 'Comprehensive assessments evaluating skills, gameplay, and teamwork to match athletes with the perfect team environment.' },
   { num: '03', Icon: Dumbbell, title: 'Train', description: 'Professional, structured training that challenges, develops, and inspires.' },
   { num: '04', Icon: Trophy, title: 'Compete', description: 'From local leagues to provincial tournaments — you compete with confidence.' },
   { num: '05', Icon: Star, title: 'Lead', description: 'Our athletes become role models — on the court, in school, and in the community.' },

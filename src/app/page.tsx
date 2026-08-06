@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import WhoWeAre from '@/components/sections/WhoWeAre';
-import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import ProgramOverview from '@/components/sections/ProgramOverview';
 import Programs from '@/components/sections/Programs';
 import PlayerJourney from '@/components/sections/PlayerJourney';
 import Coaches from '@/components/sections/Coaches';
@@ -34,7 +34,7 @@ export default function HomePage() {
         <main id="main-content" suppressHydrationWarning>
           <Hero />
           <WhoWeAre />
-          <WhyChooseUs />
+          <ProgramOverview />
           <Programs />
           <PlayerJourney />
           <Coaches />

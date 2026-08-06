@@ -183,7 +183,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         }}
         aria-hidden="true"
       >
-        Building Champions Since 2009
+        Building Champions
       </p>
     </div>
   );

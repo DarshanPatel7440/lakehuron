@@ -225,7 +225,7 @@ export default function Hero() {
                   borderRadius: '2px',
                 }}
               />
-              Lambton County, Ontario
+              Established 2026: Petrolia & Wyoming, Ontario
             </span>
           </div>
 

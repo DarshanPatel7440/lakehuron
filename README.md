@@ -15,7 +15,7 @@ It provides prospective families and athletes with clear pathways to join compet
 ## ✨ Key Features
 
 - **Hero Experience:** High-impact animated introduction with brand crest framing and responsive mobile layout.
-- **Our Story & OVA Core Values:** Narrative highlighting local Lambton County roots and 6 OVA-aligned core values.
+- **`Our Story & OVA Core Values:** Narrative highlighting local Lambton County roots and 6 OVA-aligned core values.
 - **Programs & Player Journey:** Detailed breakdown of competitive travel teams and a visual 4-stage athlete progression roadmap.
 - **Coaching Staff Roster:** Profiles featuring technical experience and OVA coaching certifications.
 - **Interactive FAQ Accordion:** Categorized Q&A answering tryout, fee, and commitment questions.

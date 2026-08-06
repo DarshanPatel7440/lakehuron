@@ -73,7 +73,7 @@ export default function WhoWeAre() {
               maxWidth: '700px',
             }}
           >
-            Rooted in Lake Huron.<br />Rising to Every Challenge.
+            Building Athletes, <br />Building Culture
           </h2>
         </ScrollReveal>
 
@@ -86,22 +86,21 @@ export default function WhoWeAre() {
               marginBottom: '16px',
               fontWeight: 600,
             }}>
-              Building Athletes, Building Culture
             </h3>
             <p style={{
               fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '1.125rem',
-              color: 'var(--color-graphite)',
-              lineHeight: 1.8,
+              fontSize: 'clamp(0.9rem, 1.15vw, 1.05rem)',
+              lineHeight: 1.82,
+              color: '#6B7280',
               marginBottom: '1rem',
             }}>
               Lake Huron Volleyball Club proudly serves athletes and families in Petrolia &amp; Wyoming and nearby Lambton County communities. Our goal is to nurture skill, confidence, leadership, and a lifelong passion for volleyball in every athlete.
             </p>
             <p style={{
               fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '1.125rem',
-              color: 'var(--color-graphite)',
-              lineHeight: 1.8,
+              fontSize: 'clamp(0.9rem, 1.15vw, 1.05rem)',
+              lineHeight: 1.82,
+              color: '#6B7280',
             }}>
               We embrace the Ospreys&apos; spirit and motto, &quot;Strike from Above.&quot;
             </p>
