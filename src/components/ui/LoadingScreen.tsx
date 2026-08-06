@@ -19,12 +19,12 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
     if (sessionStorage.getItem('lakehuron_loaded')) { onComplete(); return; }
 
     const phases = [
-      { delay: 200, phase: 1 },   // SVG draw
-      { delay: 800, phase: 2 },   // LAKE HURON text
-      { delay: 1200, phase: 3 },  // Ball spin
-      { delay: 1400, phase: 4 },  // Progress bar
-      { delay: 1800, phase: 5 },  // Tagline
-      { delay: 2200, phase: 6 },  // Fade out
+      { delay: 300, phase: 1 },   // SVG draw
+      { delay: 1100, phase: 2 },  // LAKE HURON text
+      { delay: 1700, phase: 3 },  // Ball spin
+      { delay: 2000, phase: 4 },  // Progress bar
+      { delay: 2600, phase: 5 },  // Tagline
+      { delay: 3200, phase: 6 },  // Fade out
     ];
     const timers: ReturnType<typeof setTimeout>[] = [];
     phases.forEach(({ delay, phase: p }) => {
@@ -36,12 +36,12 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       prog += 2.5;
       setProgress(Math.min(prog, 100));
       if (prog >= 100) clearInterval(interval);
-    }, 30);
+    }, 35);
     // Complete
     timers.push(setTimeout(() => {
       sessionStorage.setItem('lakehuron_loaded', '1');
       onComplete();
-    }, 2700));
+    }, 3700));
     return () => { timers.forEach(clearTimeout); clearInterval(interval); };
   }, [onComplete]);
 

@@ -25,9 +25,6 @@ try {
 
 const nextConfig: NextConfig = {
   devIndicators: false,
-  experimental: {
-    allowedDevOrigins: ['192.168.29.189:3000', 'localhost:3000'],
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },

@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const contactInfo = [
   { Icon: MapPin, label: 'Location', value: 'Lake Huron, Ontario, Canada' },
-  { Icon: Mail, label: 'Email', value: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca' },
+  { Icon: Mail, label: 'Email', value: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca?subject=Inquiry%20%E2%80%93%20Lake%20Huron%20Volleyball%20Club&body=Hi%20Lake%20Huron%20VC%20Team%2C%0A%0AI%20am%20reaching%20out%20to%20inquire%20about%20your%20programs.%0A%0AName%3A%20%5BYour%20Name%5D%0APhone%3A%20%5BYour%20Phone%5D%0AInquiry%3A%20%5BPlease%20describe%20your%20question%20or%20interest%5D%0A%0AThank%20you%2C%0A%5BYour%20Name%5D' },
   { Icon: Clock, label: 'Office Hours', value: 'Mon–Fri: 3PM–9PM · Sat: 8AM–6PM' },
 ];
 

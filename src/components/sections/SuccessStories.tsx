@@ -35,14 +35,6 @@ const testimonials = [
   },
 ];
 
-const googleReviews = [
-  { name: 'Amara K.', date: 'March 2025', review: 'Outstanding program. My son has grown so much in confidence and skill. The coaches are world-class.', rating: 5 },
-  { name: 'Tom & Lisa B.', date: 'January 2025', review: 'Best investment we\'ve made for our daughter\'s development. Lake Huron goes above and beyond.', rating: 5 },
-  { name: 'Priya S.', date: 'November 2024', review: 'The attention to detail in coaching is remarkable. Every session has a clear purpose and measurable outcomes.', rating: 5 },
-  { name: 'Ryan M.', date: 'October 2024', review: 'Joined adult recreational — best decision of the year. Incredible community, top facilities, amazing coaching.', rating: 5 },
-  { name: 'Cathy W.', date: 'September 2024', review: 'Our family has been with Lake Huron for 5 years. Three kids, all thriving. We couldn\'t imagine anywhere else.', rating: 5 },
-];
-
 export default function SuccessStories() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -88,7 +80,7 @@ export default function SuccessStories() {
         {/* Main Testimonial Carousel */}
         <ScrollReveal variant="scaleIn">
           <div
-            style={{ display: 'grid', gridTemplateColumns: '6fr 4fr', gap: '48px', alignItems: 'center', marginBottom: '80px' }}
+            style={{ display: 'grid', gridTemplateColumns: '6fr 4fr', gap: '48px', alignItems: 'center' }}
             className="testimonial-layout"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
@@ -155,36 +147,11 @@ export default function SuccessStories() {
             </div>
           </div>
         </ScrollReveal>
-
-        {/* Google Reviews Strip */}
-        <ScrollReveal variant="fadeUp">
-          <h3 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '24px', textAlign: 'center' }}>
-            What Parents Are Saying · Google Reviews
-          </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }} className="reviews-grid">
-            {googleReviews.map((review, i) => (
-              <div key={i} style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '16px', padding: '20px 16px' }}>
-                <div style={{ display: 'flex', gap: '2px', marginBottom: '10px' }}>
-                  {Array.from({ length: review.rating }).map((_, j) => (
-                    <Star key={j} size={11} fill="var(--color-gold)" style={{ color: 'var(--color-gold)' }} />
-                  ))}
-                </div>
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, marginBottom: '12px' }}>&ldquo;{review.review}&rdquo;</p>
-                <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.75rem', fontWeight: 600, color: 'white' }}>{review.name}</div>
-                <div style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.7rem', color: 'rgba(255,255,255,0.35)', marginTop: '2px' }}>{review.date}</div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
       </div>
 
       <style>{`
         @media (max-width: 900px) {
           .testimonial-layout { grid-template-columns: 1fr !important; }
-          .reviews-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 480px) {
-          .reviews-grid { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
