@@ -184,8 +184,6 @@ function CoachCard({ coach, index }: { coach: typeof coaches[0]; index: number }
               display: 'flex',
               flexDirection: 'column',
               padding: '28px',
-              position: 'absolute',
-              inset: 0,
             }}
             aria-hidden={!flipped}
           >
