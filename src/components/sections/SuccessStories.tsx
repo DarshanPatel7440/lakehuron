@@ -66,7 +66,7 @@ export default function SuccessStories() {
           <ScrollReveal variant="fadeUp">
             <span className="text-overline" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
               <span style={{ width: '32px', height: '1px', background: 'var(--color-gold)', display: 'inline-block' }} />
-              Alumni Voices
+              Parent Voices
               <span style={{ width: '32px', height: '1px', background: 'var(--color-gold)', display: 'inline-block' }} />
             </span>
           </ScrollReveal>

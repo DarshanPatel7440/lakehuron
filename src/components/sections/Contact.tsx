@@ -21,6 +21,7 @@ export default function Contact() {
   const [fields, setFields] = useState({ name: '', email: '', message: '' });
   const [inquiries, setInquiries] = useState<string[]>([]);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
 
   const toggleInquiry = (type: string) => {
     setInquiries(prev =>
@@ -31,21 +32,46 @@ export default function Contact() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFields(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    // Sanitize: strip leading/trailing whitespace on blur, allow typing freely
+    setFields(prev => ({ ...prev, [name]: value }));
+    // Clear field error on change
+    if (errors[name as keyof typeof errors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  const validate = (): boolean => {
+    const newErrors: typeof errors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!fields.name.trim() || fields.name.trim().length < 2) {
+      newErrors.name = 'Please enter your full name (at least 2 characters).';
+    }
+    if (!fields.email.trim() || !emailRegex.test(fields.email.trim())) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+    if (!fields.message.trim() || fields.message.trim().length < 10) {
+      newErrors.message = 'Please enter a message (at least 10 characters).';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validate()) return;
     setStatus('sending');
     try {
       const res = await fetch('https://formspree.io/f/mzepzekn', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          name: fields.name,
-          email: fields.email,
+          name: fields.name.trim(),
+          email: fields.email.trim(),
           inquiries: inquiries.join(', '),
-          message: fields.message,
+          message: fields.message.trim(),
         }),
       });
       if (res.ok) {
@@ -183,7 +209,7 @@ export default function Contact() {
                     Thank you for reaching out. A member of our team will respond within 24 hours. We look forward to welcoming you to the Lake Huron family.
                   </p>
                   <button
-                    onClick={() => { setStatus('idle'); setFields({ name: '', email: '', message: '' }); setInquiries([]); }}
+                    onClick={() => { setStatus('idle'); setFields({ name: '', email: '', message: '' }); setInquiries([]); setErrors({}); }}
                     className="btn-primary"
                     style={{ justifyContent: 'center', width: '100%' }}
                   >
@@ -215,10 +241,13 @@ export default function Contact() {
                         placeholder="Jane Smith"
                         value={fields.name}
                         onChange={handleChange}
-                        style={inputStyle}
-                        onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
-                        onBlur={e => { e.currentTarget.style.borderColor = 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
+                        aria-describedby={errors.name ? 'name-error' : undefined}
+                        aria-invalid={!!errors.name}
+                        style={{ ...inputStyle, borderColor: errors.name ? '#ef4444' : undefined }}
+                        onFocus={e => { e.currentTarget.style.borderColor = errors.name ? '#ef4444' : 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
+                        onBlur={e => { e.currentTarget.style.borderColor = errors.name ? '#ef4444' : 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
                       />
+                      {errors.name && <p id="name-error" role="alert" style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.75rem', color: '#dc2626', marginTop: '5px' }}>{errors.name}</p>}
                     </div>
 
                     {/* Email */}
@@ -234,10 +263,13 @@ export default function Contact() {
                         placeholder="jane@example.com"
                         value={fields.email}
                         onChange={handleChange}
-                        style={inputStyle}
-                        onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
-                        onBlur={e => { e.currentTarget.style.borderColor = 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
+                        aria-invalid={!!errors.email}
+                        style={{ ...inputStyle, borderColor: errors.email ? '#ef4444' : undefined }}
+                        onFocus={e => { e.currentTarget.style.borderColor = errors.email ? '#ef4444' : 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
+                        onBlur={e => { e.currentTarget.style.borderColor = errors.email ? '#ef4444' : 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
                       />
+                      {errors.email && <p id="email-error" role="alert" style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.75rem', color: '#dc2626', marginTop: '5px' }}>{errors.email}</p>}
                     </div>
 
                     {/* Inquiry type — multi-select chips */}
@@ -310,10 +342,13 @@ export default function Contact() {
                         placeholder="Tell us about your athlete, questions, or goals…"
                         value={fields.message}
                         onChange={handleChange}
-                        style={{ ...inputStyle, resize: 'vertical', minHeight: '130px' }}
-                        onFocus={e => { e.currentTarget.style.borderColor = 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
-                        onBlur={e => { e.currentTarget.style.borderColor = 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
+                        aria-describedby={errors.message ? 'message-error' : undefined}
+                        aria-invalid={!!errors.message}
+                        style={{ ...inputStyle, resize: 'vertical', minHeight: '130px', borderColor: errors.message ? '#ef4444' : undefined }}
+                        onFocus={e => { e.currentTarget.style.borderColor = errors.message ? '#ef4444' : 'var(--color-navy)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(8,47,87,0.08)'; }}
+                        onBlur={e => { e.currentTarget.style.borderColor = errors.message ? '#ef4444' : 'rgba(8,47,87,0.15)'; e.currentTarget.style.boxShadow = 'none'; }}
                       />
+                      {errors.message && <p id="message-error" role="alert" style={{ fontFamily: 'Manrope, sans-serif', fontSize: '0.75rem', color: '#dc2626', marginTop: '5px' }}>{errors.message}</p>}
                     </div>
 
                     {status === 'error' && (

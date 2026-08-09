@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block Next.js internal routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Sitemap
+Sitemap: https://www.lakehuronvolleyball.ca/sitemap.xml

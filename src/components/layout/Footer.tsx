@@ -1,9 +1,6 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Facebook, Youtube, Mail, MapPin, Clock, ChevronRight, ArrowRight } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Mail, MapPin, ChevronRight } from 'lucide-react';
 
 const quickLinks = [
   { label: 'About', href: '#about' },
@@ -29,13 +26,6 @@ const socials = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) { setSubscribed(true); setEmail(''); }
-  };
 
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
@@ -78,12 +68,20 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
                 { Icon: MapPin, text: 'Lake Huron, Ontario, Canada' },
-                { Icon: Mail, text: 'info@lakehuronvc.ca' },
-                { Icon: Clock, text: 'Mon–Fri: 3PM–9PM · Sat: 8AM–6PM' },
-              ].map(({ Icon, text }) => (
+                { Icon: Mail, text: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca' },
+              ].map(({ Icon, text, href }) => (
                 <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', fontFamily: 'Manrope, sans-serif' }}>
                   <Icon size={13} style={{ color: 'var(--color-gold)', flexShrink: 0 }} />
-                  <span>{text}</span>
+                  {href ? (
+                    <a href={href} style={{ color: 'inherit', textDecoration: 'none', transition: 'color 200ms' }}
+                       onMouseEnter={e => e.currentTarget.style.color = 'white'}
+                       onMouseLeave={e => e.currentTarget.style.color = 'inherit'}
+                    >
+                      {text}
+                    </a>
+                  ) : (
+                    <span>{text}</span>
+                  )}
                 </div>
               ))}
             </div>
@@ -123,42 +121,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Socials */}
           <div>
             <h3 style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--color-gold)', marginBottom: '8px' }}>Stay Connected</h3>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontFamily: 'Manrope, sans-serif', marginBottom: '16px', lineHeight: 1.6 }}>
-              Season news, event updates, and club announcements.
+              Follow us for season news, event updates, and club announcements.
             </p>
-            {subscribed ? (
-              <div style={{ color: 'var(--color-gold)', fontFamily: 'Manrope, sans-serif', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                ✓ You&apos;re subscribed. Welcome to the club.
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  required
-                  aria-label="Email address for newsletter"
-                  style={{
-                    padding: '12px 16px',
-                    background: 'rgba(255,255,255,0.06)',
-                    border: '1px solid rgba(255,255,255,0.15)',
-                    borderRadius: '4px',
-                    color: 'white',
-                    fontFamily: 'Manrope, sans-serif',
-                    fontSize: '0.875rem',
-                    outline: 'none',
-                    width: '100%',
-                  }}
-                />
-                <button type="submit" className="btn-primary" style={{ padding: '12px 20px', fontSize: '0.8rem', justifyContent: 'center' }}>
-                  Subscribe <ArrowRight size={14} />
-                </button>
-              </form>
-            )}
             <div style={{ display: 'flex', gap: '16px', marginTop: '24px' }}>
               {socials.map(({ label, href, Icon }) => (
                 <a key={label} href={href} aria-label={`Lake Huron Volleyball Club on ${label}`}
