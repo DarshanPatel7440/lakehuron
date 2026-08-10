@@ -24,23 +24,29 @@ try {
 }
 
 // Auto-copy Leadership Team photos to /public for Next.js <Image> serving
-try {
-  const leadershipDir = path.join(process.cwd(), 'Leadership Team');
-  const publicDir = path.join(process.cwd(), 'public');
-  if (fs.existsSync(leadershipDir)) {
-    if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
+// Runs both at config-load time AND via webpack plugin on every compilation
+function copyLeadershipPhotos() {
+  try {
+    const leadershipDir = path.join(process.cwd(), 'Leadership Team');
+    const publicDir = path.join(process.cwd(), 'public');
+    if (fs.existsSync(leadershipDir)) {
+      if (!fs.existsSync(publicDir)) {
+        fs.mkdirSync(publicDir, { recursive: true });
+      }
+      const files = fs.readdirSync(leadershipDir);
+      for (const file of files) {
+        const srcPath = path.join(leadershipDir, file);
+        const destPath = path.join(publicDir, file.toLowerCase().replace(/_/g, '-'));
+        fs.copyFileSync(srcPath, destPath);
+      }
     }
-    const files = fs.readdirSync(leadershipDir);
-    for (const file of files) {
-      const srcPath = path.join(leadershipDir, file);
-      const destPath = path.join(publicDir, file.toLowerCase().replace(/_/g, '-'));
-      fs.copyFileSync(srcPath, destPath);
-    }
+  } catch {
+    // Silent catch to prevent dev console warnings
   }
-} catch {
-  // Silent catch to prevent dev console warnings
 }
+
+// Run immediately at config load
+copyLeadershipPhotos();
 
 // HTTP Security Headers — applied to all routes
 const securityHeaders = [
@@ -61,8 +67,8 @@ const securityHeaders = [
     value: 'max-age=31536000; includeSubDomains; preload',
   },
   // Cross-origin resource policy
-  { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
-  { key: 'Cross-Origin-Resource-Policy', value: 'same-origin' },
+  { key: 'Cross-Origin-Opener-Policy', value: 'same-origin-allow-popups' },
+  { key: 'Cross-Origin-Resource-Policy', value: 'cross-origin' },
   // DNS prefetch control
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
   // Content Security Policy — allows Google Fonts, Formspree, and Unsplash images
@@ -111,6 +117,18 @@ const nextConfig: NextConfig = {
 
   // Remove X-Powered-By header (prevents framework fingerprinting)
   poweredByHeader: false,
+
+  // Webpack plugin: copy Leadership Team photos to /public on every compilation
+  webpack(config) {
+    config.plugins.push({
+      apply(compiler: { hooks: { afterEmit: { tap: (name: string, fn: () => void) => void } } }) {
+        compiler.hooks.afterEmit.tap('CopyLeadershipPhotos', () => {
+          copyLeadershipPhotos();
+        });
+      },
+    });
+    return config;
+  },
 };
 
 export default nextConfig;

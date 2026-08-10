@@ -67,7 +67,7 @@ export default function Footer() {
             {/* Contact Info */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
-                { Icon: MapPin, text: 'Lake Huron, Ontario, Canada' },
+                { Icon: MapPin, text: 'Petrolia and Wyoming, Ontario, Canada' },
                 { Icon: Mail, text: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca' },
               ].map(({ Icon, text, href }) => (
                 <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.55)', fontSize: '0.8rem', fontFamily: 'Manrope, sans-serif' }}>

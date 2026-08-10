@@ -6,7 +6,7 @@ const cards = [
   {
     id: 'vision',
     title: 'Our Vision',
-    text: 'To ensure student-athletes in the Lambton area have a chance to play club volleyball within the Ontario Volleyball Association structures, providing a safe, caring environment that allows the whole athlete to develop.',
+    text: 'To ensure student-athletes in the Petrolia & Wyoming and nearby Lambton County area have a chance to play club volleyball within the Ontario Volleyball Association structures, providing a safe, caring environment that allows the whole athlete to develop.',
     dark: false,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">

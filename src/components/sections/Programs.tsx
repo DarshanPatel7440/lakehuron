@@ -35,7 +35,7 @@ const programs: Program[] = [
     featured: false,
     badgeLabel: 'Tryouts Open',
     features: [
-      'Birthdates: 2011 (extended to Sept 2012)',
+      'Birthdates: 2011 (extended to Dec 2012)',
       '1st Tryout: Skills Assessment',
       '2nd Tryout: Gameplay assessment',
       '3rd Tryout: Team building (Invites-Only)'
@@ -56,7 +56,7 @@ const programs: Program[] = [
     featured: false,
     badgeLabel: 'Tryouts Open',
     features: [
-      'Birthdates: 2009 (extended to Sept 2010)',
+      'Birthdates: 2009 (extended to Dec 2010)',
       '1st Tryout: Skills Assessment',
       '2nd Tryout: Gameplay assessment',
       '3rd Tryout: Team building (Invites-Only)'

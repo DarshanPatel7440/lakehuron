@@ -8,12 +8,12 @@ const faqs = [
   {
     id: 'faq-1',
     question: 'When does the season start and end?',
-    answer: 'Our indoor season runs from September through April/May, depending on the program. The beach volleyball program runs from June through August. Registration typically opens in July/August for the upcoming indoor season.',
+    answer: 'Our indoor season runs from September through April/May, depending on the program. Registration typically opens in July/August for the upcoming indoor season.',
   },
   {
     id: 'faq-2',
     question: 'What equipment does my child need?',
-    answer: 'Athletes need proper volleyball-specific court shoes (indoor) or sand shoes (beach), knee pads, and comfortable athletic wear. We provide balls and all court equipment. The High Performance Academy includes a full equipment kit in the season fee.',
+    answer: 'Athletes need proper volleyball-specific court shoes (indoor) knee pads, and comfortable athletic wear. We provide balls and all court equipment.',
   },
   {
     id: 'faq-3',
@@ -40,16 +40,7 @@ const faqs = [
     question: 'What if my child has never played before?',
     answer: 'Our Junior Lake Huron (ages 8-11) and Rising Stars (ages 10-13) programs are designed specifically for beginners. We\'ve welcomed athletes who became provincial champions after starting with us as complete beginners. Every champion has a first day.',
   },
-  {
-    id: 'faq-8',
-    question: 'Are there opportunities to play competitively?',
-    answer: 'Absolutely. Our Competitive Edge, Elite Performance, and High Performance Academy programs compete in regional leagues and provincial tournaments. We\'ve had athletes compete at national championships and earn university scholarships through our programs.',
-  },
-  {
-    id: 'faq-9',
-    question: 'Do you offer refunds if my child cannot continue?',
-    answer: 'We offer a prorated refund within the first 30 days of the season. After that, medical withdrawals are handled case-by-case with documentation. We are fair and reasonable — we understand that life happens, and we\'ll always work with families through difficult situations.',
-  },
+
   {
     id: 'faq-10',
     question: 'How do I schedule a facility tour or get more information?',
