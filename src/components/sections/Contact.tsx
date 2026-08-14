@@ -5,7 +5,7 @@ import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const contactInfo = [
-  { Icon: MapPin, label: 'Location', value: 'Petrolia and Wyoming, Ontario, Canada' },
+  { Icon: MapPin, label: 'Location', value: 'Petrolia, Wyoming and across Lambton County' },
   { Icon: Mail, label: 'Email', value: 'info@lakehuronvc.ca', href: 'mailto:info@lakehuronvc.ca?subject=Inquiry%20%E2%80%93%20Lake%20Huron%20Volleyball%20Club&body=Hi%20Lake%20Huron%20VC%20Team%2C%0A%0AI%20am%20reaching%20out%20to%20inquire%20about%20your%20programs.%0A%0AName%3A%20%5BYour%20Name%5D%0APhone%3A%20%5BYour%20Phone%5D%0AInquiry%3A%20%5BPlease%20describe%20your%20question%20or%20interest%5D%0A%0AThank%20you%2C%0A%5BYour%20Name%5D' },
 ];
 
@@ -114,17 +114,16 @@ export default function Contact() {
           <ScrollReveal variant="fadeUp">
             <span className="text-overline" style={{ display: 'inline-flex', alignItems: 'center', gap: '12px', color: 'var(--color-gold)' }}>
               <span style={{ width: '32px', height: '1px', background: 'var(--color-gold)', display: 'inline-block' }} />
-              Get In Touch
+              WE NEED HELP
               <span style={{ width: '32px', height: '1px', background: 'var(--color-gold)', display: 'inline-block' }} />
             </span>
           </ScrollReveal>
           <ScrollReveal variant="fadeUp" delay={100}>
             <h2
               id="contact-heading"
-              className="text-section"
-              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', color: 'white', marginTop: '16px', marginBottom: '20px' }}
+              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', color: 'white', marginTop: '16px', marginBottom: '20px', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.4 }}
             >
-              Your Journey Starts<br />With a Conversation
+              We are looking for parents who can help us with the first year.<br />We need help with administration / coaching
             </h2>
           </ScrollReveal>
           <ScrollReveal variant="fadeUp" delay={180}>
@@ -176,17 +175,7 @@ export default function Contact() {
               </ScrollReveal>
             ))}
 
-            {/* Quote block */}
-            <ScrollReveal variant="fadeLeft" delay={400}>
-              <div style={{ padding: '28px', background: 'rgba(185,120,22,0.08)', border: '1px solid rgba(185,120,22,0.2)', borderRadius: '16px', marginTop: '8px' }}>
-                <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: '1.15rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, margin: 0 }}>
-                  &ldquo;We respond to every inquiry within 24 hours. No athlete or family is left without answers.&rdquo;
-                </p>
-                <p style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 700, fontSize: '0.75rem', color: 'var(--color-gold)', marginTop: '16px', letterSpacing: '0.08em' }}>
-                  — Lake Huron Volleyball Club Staff
-                </p>
-              </div>
-            </ScrollReveal>
+
           </div>
 
           {/* Right: Form */}

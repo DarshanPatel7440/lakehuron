@@ -30,7 +30,7 @@ const cards = [
   {
     id: 'community',
     title: 'Our Community',
-    text: 'We aim to create lifelong players, allowing individuals to go beyond Lambton if they desire, reaching the highest level they are capable of achieving while giving back to the club and community.',
+    text: 'We aim to create lifelong players, allowing individuals to go beyond Lambton if they desire, reaching the highest level they are capable of achieving while giving back to the club in a sustainable way to foster the culture of volleyball. Our club teams and programs run from October to April, with regular practices and weekend games or tournaments. All practices and camps take place at facilities in Petrolia and Wyoming, making it convenient for local families to participate.',
     dark: false,
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -77,35 +77,7 @@ export default function WhoWeAre() {
           </h2>
         </ScrollReveal>
 
-        <ScrollReveal variant="fadeUp" delay={150}>
-          <div style={{ marginBottom: '64px', maxWidth: '800px' }}>
-            <h3 style={{
-              fontFamily: 'Cormorant Garamond, Georgia, serif',
-              fontSize: '1.75rem',
-              color: 'var(--color-navy-dark)',
-              marginBottom: '16px',
-              fontWeight: 600,
-            }}>
-            </h3>
-            <p style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: 'clamp(0.9rem, 1.15vw, 1.05rem)',
-              lineHeight: 1.82,
-              color: '#6B7280',
-              marginBottom: '1rem',
-            }}>
-              Lake Huron Volleyball Club proudly serves athletes and families in Petrolia &amp; Wyoming and nearby Lambton County communities. Our goal is to nurture skill, confidence, leadership, and a lifelong passion for volleyball in every athlete.
-            </p>
-            <p style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: 'clamp(0.9rem, 1.15vw, 1.05rem)',
-              lineHeight: 1.82,
-              color: '#6B7280',
-            }}>
-              We embrace the Ospreys&apos; spirit and motto, &quot;Strike from Above.&quot;
-            </p>
-          </div>
-        </ScrollReveal>
+
 
         {/* Three Cards — Side by Side */}
         <div className="cards-row">

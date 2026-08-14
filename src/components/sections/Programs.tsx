@@ -24,32 +24,32 @@ interface Program {
 const programs: Program[] = [
   {
     id: 'u16-travel',
-    name: '1st Travel Teams U16 Girls',
+    name: '1st Travel Team U16 Girls',
     tagline: 'Competitive travel team',
     ageRange: 'U16 Girls',
     skillLevel: 'Advanced',
-    schedule: 'Tryouts: Mid-September',
+    schedule: 'Tryouts: September 2026',
     duration: 'Location TBD',
     coach: '',
     spotsLeft: 99,
     featured: false,
-    badgeLabel: 'Tryouts Open',
+    badgeLabel: 'Registration Open',
     features: [
       'Birthdates: 2011 (extended to Dec 2012)',
-      '1st Tryout: Skills Assessment',
-      '2nd Tryout: Gameplay assessment',
-      '3rd Tryout: Team building (Invites-Only)'
+      '1st Tryout (Sep 12): Gameplay assessment',
+      '2nd Tryout (Sep 19): Skills Assessment',
+      '3rd Tryout: (Sep 26) Positions (Invites-Only)'
     ],
     price: 'TBD',
     ctaLabel: 'Register Now',
   },
   {
     id: 'u18-travel',
-    name: '1st Travel Teams U18 Girls',
-    tagline: 'Elite travel team',
+    name: '1st Travel Team U18 Girls',
+    tagline: 'Competitive travel team',
     ageRange: 'U18 Girls',
     skillLevel: 'Advanced',
-    schedule: 'Tryouts: Mid-September',
+    schedule: 'Tryouts: September 2026',
     duration: 'Location TBD',
     coach: '',
     spotsLeft: 99,
@@ -57,9 +57,9 @@ const programs: Program[] = [
     badgeLabel: 'Tryouts Open',
     features: [
       'Birthdates: 2009 (extended to Dec 2010)',
-      '1st Tryout: Skills Assessment',
-      '2nd Tryout: Gameplay assessment',
-      '3rd Tryout: Team building (Invites-Only)'
+      '1st Tryout (Sep 12): Gameplay assessment',
+      '2nd Tryout (Sep 19): Skills Assessment',
+      '3rd Tryout: (Sep 26) Positions (Invites-Only)'
     ],
     price: 'TBD',
     ctaLabel: 'Register Now',
@@ -138,11 +138,7 @@ export default function Programs() {
               Find Your Path to the Podium
             </h2>
           </ScrollReveal>
-          <ScrollReveal variant="fadeUp" delay={200}>
-            <p className="text-lead" style={{ color: 'var(--color-graphite)', maxWidth: '560px', margin: '20px auto 0', lineHeight: 1.7 }}>
-              From first touch to provincial podium — comprehensive programs for every stage of the journey.
-            </p>
-          </ScrollReveal>
+
         </div>
 
         {/* Program Cards Grid */}

@@ -309,9 +309,7 @@ export default function Hero() {
               transition: fade(580, 600),
             }}
           >
-            Lake Huron Volleyball Club provides every young athlete the
-            opportunity to grow, learn, and thrive through
-            volleyball—regardless of background, experience, or ability.
+            Lake Huron Volleyball Club (Osprey) is a non-profit organization registered with the Ontario Volleyball Association, looking to provide travel volleyball team opportunities.
           </p>
 
           {/* CTA Buttons */}
@@ -332,7 +330,7 @@ export default function Hero() {
               aria-label="Join Lake Huron Volleyball Club today"
               className="hero-btn-primary"
             >
-              Join Our Club <ArrowRight size={15} />
+              Register for Tryout <ArrowRight size={15} />
             </button>
             <button
               onClick={() => scrollTo('#about')}

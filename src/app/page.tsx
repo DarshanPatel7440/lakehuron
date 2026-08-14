@@ -11,7 +11,6 @@ import ProgramOverview from '@/components/sections/ProgramOverview';
 import Programs from '@/components/sections/Programs';
 import PlayerJourney from '@/components/sections/PlayerJourney';
 import Coaches from '@/components/sections/Coaches';
-import SuccessStories from '@/components/sections/SuccessStories';
 import Values from '@/components/sections/Values';
 import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
@@ -38,7 +37,6 @@ export default function HomePage() {
           <Programs />
           <PlayerJourney />
           <Coaches />
-          <SuccessStories />
           <Values />
           <FAQ />
           <Contact />

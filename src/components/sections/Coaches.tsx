@@ -12,9 +12,16 @@ const coaches = [
     title: 'President, Lake Huron Volleyball Club',
     image: '/tirth-barot.jpg',
     certification: 'OVA Registered Club President',
-    achievement: 'Founder & Community Builder',
-    bio: 'As President of the Lake Huron Volleyball Club (LHVC), I started this club to meet a clear need in Petrolia, Wyoming, and the wider Lambton County community: our athletes have the talent and drive to excel, but too often they\'ve had to travel long distances—or miss out entirely—to access consistent, high-quality training and a true competitive pathway. After years in the sport as a player, volunteer, and coach, and after seeing the strong demand firsthand through local after school programs and the success of our 2023 girls\' camps, it became clear that our region was ready for a reliable, community-driven club. LHVC was built to provide progressive, structured development, prepare athletes to compete with confidence, and create local opportunities to participate in Ontario Volleyball Association (OVA) competition—supported by strong governance, transparent policies, and a positive culture families can trust. Beyond wins and results, we\'re committed to building leaders by growing coaching and refereeing opportunities right here at home, strengthening volleyball in Lambton County for the long term.',
-    achievements: ['LHVC Founder & President', 'OVA Competition Pathway', 'Growing Coaching & Refereeing Locally'],
+    achievement: 'Founder & U18 G HC',
+    bio: 'As President of the Lake Huron Volleyball Club (LHVC), I founded the club to meet a need in Petrolia and Lambton County: local athletes needed access to quality training and competition. After years in the sport and seeing the demand through local programs and our 2023 girls\' camps, I knew our community was ready. LHVC now offers structured development, prepares athletes for Ontario Volleyball Association (OVA) competition, and builds a positive, athletic culture. We\'re also focused on developing local coaches and referees to strengthen volleyball in Lambton County for the future.',
+    achievements: [
+      'OVA Development Coach',
+      'OVA Advanced Development Coach, Indoor',
+      'OVA Performance Coach',
+      'OTA Development Coach',
+      'OSA Level C Development Coach',
+      'USA Soccer Development Coach'
+    ],
     featured: true,
   },
   {
