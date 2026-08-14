@@ -18,11 +18,11 @@ interface EventItem {
 
 const events: EventItem[] = [
   { id: 'ev1', month: 'AUG', day: '02', name: 'Fall Season Registration Opens', location: 'Online & Lake Huron Training Centre', time: '9:00 AM', category: 'Registration', date: new Date('2026-08-02'), registerLink: '#contact' },
-  { id: 'ev2', month: 'AUG', day: '16', name: 'Youth Open Tryouts — U14 & U16', location: 'Lake Huron Training Centre, Lambton County', time: '10:00 AM – 1:00 PM', category: 'Tryouts', date: new Date('2026-08-16'), registerLink: '#contact' },
+  { id: 'ev2', month: 'AUG', day: '16', name: 'Youth Open Tryouts — 14U & 16U', location: 'Lake Huron Training Centre, Lambton County', time: '10:00 AM – 1:00 PM', category: 'Tryouts', date: new Date('2026-08-16'), registerLink: '#contact' },
   { id: 'ev3', month: 'AUG', day: '23', name: 'Beach Volleyball Season Finale', location: 'Sauble Beach, ON', time: '8:00 AM – 6:00 PM', category: 'Tournament', date: new Date('2026-08-23'), registerLink: '#contact' },
   { id: 'ev4', month: 'SEP', day: '06', name: 'Fall Season Kickoff — All Programs', location: 'Lake Huron Training Centre', time: '9:00 AM', category: 'Season Start', date: new Date('2026-09-06'), registerLink: '#contact' },
   { id: 'ev5', month: 'SEP', day: '20', name: 'Parent & Athlete Information Night', location: 'Lake Huron Community Hall', time: '7:00 PM – 9:00 PM', category: 'Community', date: new Date('2026-09-20'), registerLink: '#contact' },
-  { id: 'ev6', month: 'OCT', day: '04', name: 'Southern Ontario Invitational — U18', location: 'London Sports Complex, London ON', time: '8:00 AM', category: 'Tournament', date: new Date('2026-10-04'), registerLink: '#contact' },
+  { id: 'ev6', month: 'OCT', day: '04', name: 'Southern Ontario Invitational — 18U', location: 'London Sports Complex, London ON', time: '8:00 AM', category: 'Tournament', date: new Date('2026-10-04'), registerLink: '#contact' },
   { id: 'ev7', month: 'OCT', day: '18', name: 'High Performance Academy Showcase', location: 'Lake Huron Training Centre', time: '2:00 PM – 5:00 PM', category: 'Showcase', date: new Date('2026-10-18'), registerLink: '#contact' },
   { id: 'ev8', month: 'NOV', day: '08', name: 'Regional Championships — Competitive', location: 'Owen Sound Sports Dome, ON', time: '7:00 AM', category: 'Championship', date: new Date('2026-11-08'), registerLink: '#contact' },
 ];

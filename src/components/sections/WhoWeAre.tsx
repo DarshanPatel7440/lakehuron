@@ -27,20 +27,7 @@ const cards = [
       </svg>
     ),
   },
-  {
-    id: 'community',
-    title: 'Our Community',
-    text: 'We aim to create lifelong players, allowing individuals to go beyond Lambton if they desire, reaching the highest level they are capable of achieving while giving back to the club in a sustainable way to foster the culture of volleyball. Our club teams and programs run from October to April, with regular practices and weekend games or tournaments. All practices and camps take place at facilities in Petrolia and Wyoming, making it convenient for local families to participate.',
-    dark: false,
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="9" cy="7" r="3" stroke="#B8860B" strokeWidth="1.8" />
-        <circle cx="15" cy="7" r="3" stroke="#B8860B" strokeWidth="1.8" />
-        <path d="M3 19C3 16.24 5.69 14 9 14" stroke="#B8860B" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M21 19C21 16.24 18.31 14 15 14C11.69 14 9 16.24 9 19" stroke="#B8860B" strokeWidth="1.8" strokeLinecap="round" />
-      </svg>
-    ),
-  },
+
 ];
 
 export default function WhoWeAre() {
@@ -121,7 +108,7 @@ export default function WhoWeAre() {
         /* ── Cards row: 3 equal columns ── */
         .cards-row {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: clamp(16px, 2.5vw, 28px);
           align-items: stretch;
         }

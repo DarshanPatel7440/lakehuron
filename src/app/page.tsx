@@ -12,7 +12,6 @@ import Programs from '@/components/sections/Programs';
 import PlayerJourney from '@/components/sections/PlayerJourney';
 import Coaches from '@/components/sections/Coaches';
 import Values from '@/components/sections/Values';
-import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 
 export default function HomePage() {
@@ -38,7 +37,6 @@ export default function HomePage() {
           <PlayerJourney />
           <Coaches />
           <Values />
-          <FAQ />
           <Contact />
         </main>
         <Footer />

@@ -225,7 +225,7 @@ export default function Hero() {
                   borderRadius: '2px',
                 }}
               />
-              Established 2026: Petrolia & Wyoming, Ontario
+              Established 2026: Petrolia, Wyoming and across Lambton County
             </span>
           </div>
 
@@ -325,7 +325,7 @@ export default function Hero() {
             }}
           >
             <button
-              onClick={() => scrollTo('#contact')}
+              onClick={() => scrollTo('#programs')}
               id="hero-join-btn"
               aria-label="Join Lake Huron Volleyball Club today"
               className="hero-btn-primary"

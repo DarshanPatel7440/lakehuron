@@ -123,7 +123,7 @@ export default function Contact() {
               id="contact-heading"
               style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', color: 'white', marginTop: '16px', marginBottom: '20px', fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', lineHeight: 1.4 }}
             >
-              We are looking for parents who can help us with the first year.<br />We need help with administration / coaching
+              We are looking for parents who can help us with the first year.<br />We need help with administration &amp; coaching
             </h2>
           </ScrollReveal>
           <ScrollReveal variant="fadeUp" delay={180}>

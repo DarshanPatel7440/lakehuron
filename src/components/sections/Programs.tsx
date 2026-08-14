@@ -24,12 +24,12 @@ interface Program {
 const programs: Program[] = [
   {
     id: 'u16-travel',
-    name: '1st Travel Team U16 Girls',
+    name: '1st Travel Team 16U Girls',
     tagline: 'Competitive travel team',
-    ageRange: 'U16 Girls',
+    ageRange: '16U Girls',
     skillLevel: 'Advanced',
     schedule: 'Tryouts: September 2026',
-    duration: 'Location TBD',
+    duration: 'Location',
     coach: '',
     spotsLeft: 99,
     featured: false,
@@ -40,66 +40,66 @@ const programs: Program[] = [
       '2nd Tryout (Sep 19): Skills Assessment',
       '3rd Tryout: (Sep 26) Positions (Invites-Only)'
     ],
-    price: 'TBD',
+    price: '',
     ctaLabel: 'Register Now',
   },
   {
     id: 'u18-travel',
-    name: '1st Travel Team U18 Girls',
+    name: '1st Travel Team 18U Girls',
     tagline: 'Competitive travel team',
-    ageRange: 'U18 Girls',
+    ageRange: '18U Girls',
     skillLevel: 'Advanced',
     schedule: 'Tryouts: September 2026',
-    duration: 'Location TBD',
+    duration: 'Location',
     coach: '',
     spotsLeft: 99,
     featured: false,
-    badgeLabel: 'Tryouts Open',
+    badgeLabel: 'Registration Open',
     features: [
       'Birthdates: 2009 (extended to Dec 2010)',
       '1st Tryout (Sep 12): Gameplay assessment',
       '2nd Tryout (Sep 19): Skills Assessment',
       '3rd Tryout: (Sep 26) Positions (Invites-Only)'
     ],
-    price: 'TBD',
+    price: '',
     ctaLabel: 'Register Now',
   },
   {
     id: 'skill-camps',
     name: 'Skill Camps',
     tagline: 'Develop your fundamentals',
-    ageRange: 'U10 / U12 / U14',
+    ageRange: '10U / 12U / 14U',
     skillLevel: 'All Levels',
     schedule: 'Mid-October',
-    duration: 'Location TBD',
+    duration: 'Location',
     coach: '',
     spotsLeft: 99,
     featured: false,
     features: [
-      'U10: Date TBD (Mid-October)',
-      'U12: Date TBD (Mid-October)',
-      'U14: Date TBD (Mid-October)'
+      '10U: Mid-October',
+      '12U: Mid-October',
+      '14U: Mid-October'
     ],
-    price: 'TBD',
+    price: '',
     ctaLabel: 'Register Now',
   },
   {
     id: 'house-leagues',
     name: 'House Leagues',
     tagline: 'Local league play',
-    ageRange: 'U12 / U14 / U16',
+    ageRange: '12U / 14U / 16U',
     skillLevel: 'Recreational',
     schedule: 'Mid-October',
-    duration: 'Location TBD',
+    duration: 'Location',
     coach: '',
     spotsLeft: 99,
     featured: false,
     features: [
-      'U12: Date TBD (Mid-October)',
-      'U14: Date TBD (Mid-October)',
-      'U16: Date TBD (Mid-October)'
+      '12U: Mid-October',
+      '14U: Mid-October',
+      '16U: Mid-October'
     ],
-    price: 'TBD',
+    price: '',
     ctaLabel: 'Register Now',
   }
 ];
@@ -242,17 +242,19 @@ export default function Programs() {
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
                     <span style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 700, fontSize: '1.25rem', color: program.featured ? 'var(--color-gold)' : 'var(--color-navy)' }}>{program.price}</span>
                   </div>
-                  <button
-                    onClick={scrollToContact}
+                  <a
+                    href="https://register.citruscamps.com/pg/pg_wifCQXCvOxAMEQqT?type=camp"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={program.featured ? 'btn-primary' : 'btn-outline'}
                     style={{
-                      width: '100%', justifyContent: 'center', fontSize: '0.8rem', padding: '12px',
+                      display: 'flex', width: '100%', justifyContent: 'center', fontSize: '0.8rem', padding: '12px', textDecoration: 'none',
                       ...(program.featured ? {} : { color: 'var(--color-navy)', borderColor: 'var(--color-navy)' }),
                     }}
                     aria-label={`${program.ctaLabel} for ${program.name}`}
                   >
                     {program.ctaLabel} <ChevronRight size={14} />
-                  </button>
+                  </a>
                 </div>
               </div>
             </ScrollReveal>

@@ -12,7 +12,7 @@ const coaches = [
     title: 'President, Lake Huron Volleyball Club',
     image: '/tirth-barot.jpg',
     certification: 'OVA Registered Club President',
-    achievement: 'Founder & U18 G HC',
+    achievement: 'Founder & 18UG HC',
     bio: 'As President of the Lake Huron Volleyball Club (LHVC), I founded the club to meet a need in Petrolia and Lambton County: local athletes needed access to quality training and competition. After years in the sport and seeing the demand through local programs and our 2023 girls\' camps, I knew our community was ready. LHVC now offers structured development, prepares athletes for Ontario Volleyball Association (OVA) competition, and builds a positive, athletic culture. We\'re also focused on developing local coaches and referees to strengthen volleyball in Lambton County for the future.',
     achievements: [
       'OVA Development Coach',
@@ -30,7 +30,7 @@ const coaches = [
     title: 'Vice-President, Lake Huron Volleyball Club',
     image: '/amber-phoenix.jpg',
     certification: 'Founding Board Member',
-    achievement: 'Vice-President',
+    achievement: 'Board Member & 16UG HC',
     bio: 'As Vice-President of the Lake Huron Volleyball Club, Amber Phoenix brings strong leadership and a deep commitment to growing volleyball opportunities in Petrolia, Wyoming, and across Lambton County. Her passion for community development and athlete growth drives the club\'s mission to provide accessible, high-quality programming for all ages and skill levels.',
     achievements: ['Vice-President, LHVC', 'Founding Board Member', 'Community Leadership'],
     featured: false,
@@ -48,12 +48,12 @@ const coaches = [
   },
   {
     id: 'coach-roxanne',
-    name: 'Roxanne Gilroy-Machado',
+    name: 'Roxanne Gilroy',
     title: 'Treasurer, Lake Huron Volleyball Club',
     image: '/roxanne-gilroy-machado.jpg',
     certification: 'Financial Oversight & Grant Writing',
-    achievement: 'Treasurer',
-    bio: 'Roxanne Gilroy-Machado serves as Treasurer for the Lake Huron Volleyball Club, where she supports the organization\'s financial stewardship and long-term success. Roxanne grew up in Petrolia, and as a former athlete that competed at the international level she highly values improving access to competitive sports opportunities for today\'s youth. She has also been a proud volleyball mom for the past 6 years. With extensive leadership experience in community services which includes grant proposal writing and financial oversight for government funded programs she is dedicated to fostering positive opportunities for youth, families, and athletes in the region.',
+    achievement: 'Treasurer & Board Member',
+    bio: 'Roxanne Gilroy serves as Treasurer for the Lake Huron Volleyball Club, where she supports the organization\'s financial stewardship and long-term success. Roxanne grew up in Petrolia, and as a former athlete that competed at the international level she highly values improving access to competitive sports opportunities for today\'s youth. She has also been a proud volleyball mom for the past 6 years. With extensive leadership experience in community services which includes grant proposal writing and financial oversight for government funded programs she is dedicated to fostering positive opportunities for youth, families, and athletes in the region.',
     achievements: ['International-Level Competitor', 'Grant Proposal Writing', 'Government Program Oversight'],
     featured: false,
   },
@@ -285,15 +285,7 @@ export default function Coaches() {
               <span style={{ width: '32px', height: '1px', background: 'var(--color-gold)', display: 'inline-block' }} />
             </span>
           </ScrollReveal>
-          <ScrollReveal variant="fadeUp" delay={100}>
-            <h2
-              id="coaches-heading"
-              className="text-section"
-              style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', color: 'var(--color-navy-dark)', marginTop: '16px' }}
-            >
-              Coached by Champions.<br />Guided by Champions.
-            </h2>
-          </ScrollReveal>
+
         </div>
 
         <div

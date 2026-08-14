@@ -4,12 +4,12 @@ import { Instagram, Facebook, Youtube, Mail, MapPin, ChevronRight } from 'lucide
 
 const quickLinks = [
   { label: 'About', href: '#about' },
-  { label: 'Coaches', href: '#coaches' },
+  { label: 'Leadership', href: '#coaches' },
   { label: 'Contact', href: '#contact' },
 ];
 const programs = [
-  { label: 'U16 Travel Team', href: '#programs' },
-  { label: 'U18 Travel Team', href: '#programs' },
+  { label: '16U Travel Team', href: '#programs' },
+  { label: '18U Travel Team', href: '#programs' },
   { label: 'Skill Camps', href: '#programs' },
   { label: 'House Leagues', href: '#programs' },
 ];
