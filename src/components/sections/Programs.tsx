@@ -29,16 +29,15 @@ const programs: Program[] = [
     ageRange: '16U Girls',
     skillLevel: 'Advanced',
     schedule: 'Tryouts: September 2026',
-    duration: 'Location',
+    duration: 'John Knox Christian School (Wyoming, ON)',
     coach: '',
     spotsLeft: 99,
     featured: false,
     badgeLabel: 'Registration Open',
     features: [
       'Birthdates: 2011 (extended to Dec 2012)',
-      '1st Tryout (Sep 12): Gameplay assessment',
-      '2nd Tryout (Sep 19): Skills Assessment',
-      '3rd Tryout: (Sep 26) Positions (Invites-Only)'
+      '1st Tryout: Friday, Sep 25, 2026 from 5.30 pm to 7.00 pm',
+      '2nd Tryout: Saturday, Sep 26, 2026 from 12.30 pm to 2pm'
     ],
     price: '',
     ctaLabel: 'Register Now',
@@ -50,16 +49,16 @@ const programs: Program[] = [
     ageRange: '18U Girls',
     skillLevel: 'Advanced',
     schedule: 'Tryouts: September 2026',
-    duration: 'Location',
+    duration: 'John Knox Christian School (Wyoming, ON)',
     coach: '',
     spotsLeft: 99,
     featured: false,
     badgeLabel: 'Registration Open',
     features: [
       'Birthdates: 2009 (extended to Dec 2010)',
-      '1st Tryout (Sep 12): Gameplay assessment',
-      '2nd Tryout (Sep 19): Skills Assessment',
-      '3rd Tryout: (Sep 26) Positions (Invites-Only)'
+      '1st Tryout: Saturday, Sep 19, 2026 from 2.00 pm to 4.00 pm',
+      '2nd Tryout: Friday, Sep 25, 2026 from 7.00 pm to 9.00 pm',
+      '3rd Tryout: Saturday, Sep 26, 2026 from 2.00 pm to 4.00 pm (Invites-Only)'
     ],
     price: '',
     ctaLabel: 'Register Now',

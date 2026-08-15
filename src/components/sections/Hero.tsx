@@ -330,7 +330,7 @@ export default function Hero() {
               aria-label="Join Lake Huron Volleyball Club today"
               className="hero-btn-primary"
             >
-              Register for Tryout <ArrowRight size={15} />
+              Register for Tryouts <ArrowRight size={15} />
             </button>
             <button
               onClick={() => scrollTo('#about')}
