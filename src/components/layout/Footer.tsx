@@ -21,7 +21,7 @@ const resources = [
 ];
 const socials = [
   { label: 'Instagram', href: '#', Icon: Instagram },
-  { label: 'Facebook', href: '#', Icon: Facebook },
+  { label: 'Facebook', href: 'https://www.facebook.com/people/Lake-Huron-Volleyball-Club/61593418739602/?rdid=Np9Jh0NXRRheCcaL&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1V7tvTou5f%2F', Icon: Facebook },
   { label: 'YouTube', href: '#', Icon: Youtube },
 ];
 
@@ -130,6 +130,8 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: '16px', marginTop: '24px' }}>
               {socials.map(({ label, href, Icon }) => (
                 <a key={label} href={href} aria-label={`Lake Huron Volleyball Club on ${label}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ width: '40px', height: '40px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.6)', transition: 'all 200ms' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--color-gold)'; e.currentTarget.style.color = 'var(--color-gold)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = 'rgba(255,255,255,0.6)'; }}
